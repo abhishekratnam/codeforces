@@ -8,3 +8,4 @@ for i in n:
         l.append(i)
 print(k+l)
 print(l+k)
+    

@@ -28,7 +28,7 @@ def printList(arr,k):
             return arr[k]
     
 if __name__=="__main__":
-    arr = [12,2,3]
+    arr = [12,2,4,5,63,3]
     mergeSort(arr)
     k = int(input())
     Kth = printList(arr,k)

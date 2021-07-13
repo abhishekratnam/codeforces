@@ -22,7 +22,7 @@ def getMazMin(arr, n):
     return minmax
 
 if __name__=="__main__":
-    arr = [100,11,445,1]
+    arr = [100,11,445,3,1]
     arr_size = 6
     minmax = getMazMin(arr, arr_size)
     print("Minimum element is", minmax.min)

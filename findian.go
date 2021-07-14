@@ -5,46 +5,23 @@ import (
 	"strings"
 )
 
-func check(arr []string) bool {
-	var (
-		i, a  int
-		count int = 0
-	)
-	for k := 0; k < len(arr); k++ {
-		if arr[k] == "i" {
-			count += 1
-			i = k
-			break
-		}
-	}
-	for q := i + 1; q < len(arr); q++ {
-		if arr[q] == "a" {
-			count += 1
-			a = q
-			break
-		}
+// Write a program which prompts the user to enter a string. The program searches through the entered string for the characters â€˜iâ€™, â€˜aâ€™, and â€˜nâ€™. The program should print â€œFound!â€ if the entered string starts with the character â€˜iâ€™, ends with the character â€˜nâ€™, and contains the character â€˜aâ€™. The program should print â€œNot Found!â€ otherwise. The program should not be case-sensitive, so it does not matter if the characters are upper-case or lower-case.
 
-	}
+// Examples: The program should print â€œFound!â€ for the following example entered strings, â€œianâ€, â€œIanâ€, â€œiuiygaygnâ€, â€œI d skd a efju Nâ€. The program should print â€œNot Found!â€ for the following strings, â€œihhhhhnâ€, â€œinaâ€, â€œxianâ€.
 
-	for w := a + 1; w < len(arr); w++ {
-		if arr[w] == "n" {
-			count += 1
-			break
-		}
-	}
-	return true
-}
 func main() {
-	fmt.Println("Enter the stirng")
-	var word string
-	fmt.Scanln(&word)
-	arr := strings.Split(word, "")
-	//Found := []string{"ian", "Ian", "iuiygaygn", "I d skd a efju N"}
-	// NotFound := []string{"ihhhhhn", "ina","xian"}
-	//should strat with i and ends with n with a in between
-	res := check(arr)
-	if res {
-		fmt.Println("Found")
-	}
+	var stringInput string
+	fmt.Println(`Please enter a string value with double quotes, ex "ian"`)
+	fmt.Scanf("%q", &stringInput)
 
+	hasPrefixI := strings.HasPrefix(stringInput, "i")
+	hasSuffixN := strings.HasSuffix(stringInput, "n")
+	hasContainA := strings.Contains(stringInput, "A")
+	hasContaina := strings.Contains(stringInput, "a")
+
+	if hasPrefixI && hasSuffixN && (hasContainA || hasContaina) {
+		fmt.Println("Found")
+	} else {
+		fmt.Println("Not Found")
+	}
 }

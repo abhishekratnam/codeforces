@@ -10,13 +10,7 @@ def getMinDiff(arr, n, k):
     for i in min_ele:
         if i==0:
             min_ele.remove(i)
-    
-        
     return max(min_ele)-min(min_ele)
-        
-            
-        
-
 arr= [1,5,8,10]
 n = len(arr) 
 k = 2

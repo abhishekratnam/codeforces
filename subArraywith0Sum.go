@@ -17,6 +17,6 @@ func isTrue(pos []int) bool {
 
 }
 func main() {
-	slice := []int{2, 1, -3, 4, 2}
+	slice := []int{2, 1, 3, 4, -2}
 	fmt.Println(isTrue(slice))
 }

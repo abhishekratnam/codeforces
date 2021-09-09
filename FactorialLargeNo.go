@@ -1,11 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/big"
+)
 
-func Factorial(num int) int {
+func Factorial(num int) big.Int {
 	// slice := []int{1}
 	if num == 0 || num == 1 {
-		return 1
+		return big.NewInt(0) * big.Int(1)
 	}
 	a := 1
 	for i := 2; i < num+1; i++ {

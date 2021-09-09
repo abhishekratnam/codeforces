@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func SubArraySmartForKelement(pos []int, k int) bool {
+func SubArraySmartForKnumber(pos []int, k int) bool {
 	length := len(pos)
 	contains := make(map[int]bool)
 	sum := 0
@@ -49,4 +49,5 @@ func main() {
 	slice := []int{2, 1, 3, 4, -2}
 	fmt.Println(SubArrayNaive(slice))
 	fmt.Println(SubArraySmart(slice))
+	fmt.Println(SubArraySmartForKnumber(slice, 2))
 }

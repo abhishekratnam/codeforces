@@ -3,19 +3,16 @@ package main
 import "fmt"
 
 func bubblesort(arr []int) []int {
-	run := true
-	for run {
-		run = false
-		for i := 0; i < len(arr)-1; i++ {
-			if arr[i] > arr[i+1] {
-				arr[i], arr[i+1] = arr[i+1], arr[i]
-				run = true
+	for i := 0; i < len(arr); i++ {
+		for j := i + 1; j < len(arr); j++ {
+			if arr[i] > arr[j] {
+				arr[j], arr[i] = arr[i], arr[j]
 			}
 		}
 	}
 	return arr
 }
 func main() {
-	arr := []int{1, 3, 2, 5, 8}
+	arr := []int{4, 3, 7, 1, 5}
 	fmt.Println(bubblesort(arr))
 }

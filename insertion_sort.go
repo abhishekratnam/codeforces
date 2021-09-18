@@ -2,10 +2,13 @@ package main
 
 import "fmt"
 
+func Swap(a *int, b *int) {
+	*a, *b = *b, *a
+}
 func Insertion_sort(arr []int) []int {
 	for i := 0; i < len(arr); i++ {
 		for j := i; j > 0 && arr[j-1] > arr[j]; j-- {
-			arr[j], arr[j-1] = arr[j-1], arr[j]
+			Swap(&arr[j], &arr[j-1])
 		}
 	}
 	return arr

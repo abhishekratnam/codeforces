@@ -40,11 +40,17 @@ func trappingRainWater(arr []int, length int) int {
 	for i, j := 0, 0; i < len(left) && j < len(right); j++ {
 		if left[i] > right[j] {
 			min = right[j]
+			final += min
+			fmt.Println(min)
+		} else if left[i] < right[j] {
+			min = left[i]
+			final += min
+			fmt.Println(min)
 		}
-		final += min
+
 		i += 1
 	}
-
+	fmt.Println(left, right)
 	return final
 
 }

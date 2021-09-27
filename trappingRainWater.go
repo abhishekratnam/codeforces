@@ -32,10 +32,9 @@ func trappingRainWater(arr []int, length int) int {
 			maxima = arr_max
 		}
 		left = append(left, maxima)
-
 	}
 	right = append(right, arr[length-1])
-	for i := length - 2; i > 0; i-- {
+	for i := length - 2; i >= 0; i-- {
 		arr_min := max(arr[i], arr[i+1])
 		if minima < arr_min {
 			minima = arr_min

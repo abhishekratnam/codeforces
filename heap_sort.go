@@ -52,7 +52,7 @@ func Maxheap_sort(arr []int) []int {
 	ar, length := BuildMaxHeap(arr)
 	for i := length - 1; i >= 0; i-- {
 		ar[0], ar[i] = ar[i], ar[0]
-		Maxheapify(ar[:length], length, i)
+		Maxheapify(ar, length, i)
 	}
 	return ar
 }
@@ -60,7 +60,7 @@ func Minheap_sort(arr []int) []int {
 	ar, length := BuildMinHeap(arr)
 	for i := length - 1; i >= 0; i-- {
 		ar[0], ar[i] = ar[i], ar[0]
-		Minheapify(ar[:length], length, i)
+		Minheapify(ar, length, i)
 	}
 	return ar
 }

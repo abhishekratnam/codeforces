@@ -9,11 +9,9 @@ func maxdiffbet2elements(arr []int) int {
 	for i := 1; i < len(arr); i++ {
 		if arr[i]-min_element > max_diff_sofar {
 			max_diff_sofar = arr[i] - min_element
-
 		}
 		if arr[i] < min_element {
 			min_element = arr[i]
-
 		}
 	}
 	return max_diff_sofar

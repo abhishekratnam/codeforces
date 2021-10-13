@@ -25,7 +25,6 @@ func TripletSumArrayOptimized(arr []int, n, x int) int {
 		}
 	}
 	return 0
-
 }
 
 //Naive Approach

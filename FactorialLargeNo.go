@@ -8,7 +8,7 @@ import (
 func Factorial(num int) big.Int {
 	// slice := []int{1}
 	if num == 0 || num == 1 {
-		return big.NewInt(0) * big.Int(1)
+		return big.Int(1)
 	}
 	a := 1
 	for i := 2; i < num+1; i++ {
